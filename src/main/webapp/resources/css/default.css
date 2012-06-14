@@ -1,0 +1,51 @@
+body {
+   margin: 0;
+   padding: 0;
+   background-color:  lightGray;
+   font-family: Arial;
+   font-size: 1.2em;
+}
+
+.heading {
+  padding: 10px;
+  background: yellow;
+  border: 2px blue;
+  font-size: 1.4em;
+  border: thin solid black;
+  font-family: Arial;
+  text-align: center;
+  height: 50px;
+}
+
+.menuAndContent {
+  width: 100%;
+  height: 100%;
+}
+
+.menu {
+  padding-right: 60px;
+  padding-left: 20px;
+  padding-bottom: 40px;
+  border: thin solid black;
+  position: absolute;
+  left: 10px;
+  height: 80%;
+  width: 200px;
+  background: yellow;
+  top: 90px;
+  text-decoration: underline;
+}
+
+.content {
+  padding-right: 60px;
+  padding-left: 160px;
+  padding-bottom: 40px;
+  padding-top: 50px;
+  border: thin solid black;
+  background: yellow;	
+  position:absolute;
+  left: 235px; 
+  right: 65px;
+  top: 90px;
+  height: 80%;
+}

@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui:composition xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:ui="http://java.sun.com/jsf/facelets"
+	xmlns:f="http://java.sun.com/jsf/core"
+	xmlns:h="http://java.sun.com/jsf/html"
+	template="/templates/default.xhtml"
+	xmlns:a4j="http://richfaces.org/a4j"
+	xmlns:rich="http://richfaces.org/rich">
+
+	<ui:define name="content">
+		<h:form id="personForm">
+			<h:panelGrid columns="2">
+			
+				<h:outputText value="#{msg.personNameLabel}" />
+				<h:inputText id="name" value="#{personBean.person.name}">
+					<a4j:ajax render="messages" execute="@this" />
+				</h:inputText>
+
+				<h:outputText value="#{msg.personTitleLabel}" />
+				<h:inputText id="title" value="#{personBean.person.title}" />
+
+
+				<h:outputText value="#{msg.personRentLabel}" />
+
+				<rich:calendar value="#{personBean.person.rent}"
+					id="calendar" datePattern="dd.MM.yyyy" showApplyButton="#{true}"
+					cellWidth="24px" cellHeight="22px" style="width:200px">
+					<a4j:ajax render="messages" execute="@this" />
+				</rich:calendar>
+			</h:panelGrid>
+
+			<h:panelGrid>
+				<h:messages for="" />
+				<h:messages id="messages" showDetail="#{true}"
+					showSummary="#{false}" />
+			</h:panelGrid>
+
+			
+				
+					<h:commandButton value="#{msg.personFormOKButton}"
+						action="#{personBean.addPerson}" />
+
+
+		
+			
+		</h:form>
+
+	</ui:define>
+</ui:composition>
